@@ -1,0 +1,32 @@
+# update ubuntu
+sudo apt update
+
+sudo apt -y upgrade
+
+
+# install R
+sudo apt-get install r-base r-base-dev
+
+# install R-studio
+sudo apt-get install gdebi-core
+
+wget https://download1.rstudio.org/rstudio-0.99.896-amd64.deb
+
+sudo dpkg -i rstudio-1.0.124-amd64.deb  # identify missing packages, if any (here it was: Package libgstreamer-plugins-base0.10-0 is not installed) 
+
+wget http://ftp.ca.debian.org/debian/pool/main/g/gstreamer0.10/libgstreamer0.10-0_0.10.36-1.5_amd64.deb
+
+wget http://ftp.ca.debian.org/debian/pool/main/g/gst-plugins-base0.10/libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
+
+sudo dpkg -i libgstreamer0.10-0_0.10.36-1.5_amd64.deb 
+
+sudo dpkg -i libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
+
+sudo apt-mark hold libgstreamer-plugins-base0.10-0  # Make sure they don't get over-written at the next software update
+
+sudo apt-mark hold libgstreamer0.10
+
+sudo gdebi rstudio-1.1.5-amd64.deb # install R
+
+rstudio # run 
+
