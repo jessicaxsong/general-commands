@@ -30,3 +30,19 @@ sudo gdebi rstudio-1.3.1093-amd64.deb # install R
 
 rstudio # run 
 
+# run processes in background via shell 
+command & # ampersand to prevent terminating process upon shell exit
+
+# check active processes 
+jobs
+
+# check running processes
+ps
+
+# check real-time processes 
+top
+
+# copy files remotely from server to another
+# from local terminal
+scp user@remote_server:/filepath/file.txt localpath/copied-file.txt # remote server to local one
+scp file.txt user@remote_server:/filepath/copied-file.txt # local server to remote one
