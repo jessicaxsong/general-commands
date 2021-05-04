@@ -30,6 +30,13 @@ sudo gdebi rstudio-1.3.1093-amd64.deb # install R
 
 rstudio # run 
 
+# update R (from RGUI)
+# installing/loading the package:
+if(!require(installr)) {
+install.packages("installr"); require(installr)} #load / install+load installr
+
+updateR() # this will start the updating process of your R installation
+
 # run processes in background via shell 
 command & # ampersand to prevent terminating process upon shell exit
 
