@@ -44,5 +44,5 @@ top
 
 # copy files remotely from server to another
 # from local terminal
-scp user@remote_server:/filepath/file.txt localpath/copied-file.txt # remote server to local one
+scp user@remote_server:/filepath/file.txt localpath/copied-file.txt # remote server to local one (do not do so through ssh)
 scp file.txt user@remote_server:/filepath/copied-file.txt # local server to remote one
